@@ -1,0 +1,259 @@
+@charset "utf-8";
+/**header样式**/
+header .person,header .menu{
+    margin-left:.2rem;
+    width:.4rem;
+    background:url(../img/person@3x.png) no-repeat 0 .24rem;
+    background-size:contain;
+}
+header .menu{
+    margin-right:.2rem;
+    background-image:url(../img/menu@3x.png);
+}
+header .person.close,header .menu.close{
+    background-image:url(../img/close@3x.png);
+}
+header img{
+    width:100%;
+}
+header .logo{
+    width:2rem;
+    position:absolute;
+    left:50%;
+    margin-left:-1rem;
+    line-height:.88rem;
+}
+/**header样式结束**/
+
+/**swipe.css样式**/
+.swiper-container {
+    margin:0 auto;
+    position:relative;
+    overflow:hidden;
+    -webkit-backface-visibility:hidden;
+    backface-visibility:hidden;
+    /* Fix of Webkit flickering */
+    z-index:1;
+}
+.swiper-wrapper {
+    position:relative;
+    width:100%;
+    -webkit-transition-property:-webkit-transform, left, top;
+    -webkit-transition-duration:0s;
+    -webkit-transform:translate3d(0px,0,0);
+    -webkit-transition-timing-function:ease;
+
+    -moz-transition-property:-moz-transform, left, top;
+    -moz-transition-duration:0s;
+    -moz-transform:translate3d(0px,0,0);
+    -moz-transition-timing-function:ease;
+
+    -o-transition-property:-o-transform, left, top;
+    -o-transition-duration:0s;
+    -o-transform:translate3d(0px,0,0);
+    -o-transition-timing-function:ease;
+    -o-transform:translate(0px,0px);
+
+    -ms-transition-property:-ms-transform, left, top;
+    -ms-transition-duration:0s;
+    -ms-transform:translate3d(0px,0,0);
+    -ms-transition-timing-function:ease;
+
+    -webkit-transition-property:left, top, -webkit-transform;
+
+    transition-property:left, top, -webkit-transform;
+
+    transition-property:transform, left, top;
+
+    transition-property:transform, left, top, -webkit-transform;
+    transition-duration:0s;
+    transform:translate3d(0px,0,0);
+    transition-timing-function:ease;
+}
+.swiper-free-mode > .swiper-wrapper {
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+    margin: 0 auto;
+}
+.swiper-slide {
+    float: left;
+}
+/* IE10 Windows Phone 8 Fixes */
+.swiper-wp8-horizontal {
+    -ms-touch-action: pan-y;
+}
+.swiper-wp8-vertical {
+    -ms-touch-action: pan-x;
+}
+.bg{
+    position:fixed;
+    top:.88rem;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index:-1;
+}
+.swiper-slide{
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide img{
+    width:100%;
+    height:100%;
+}
+.bg a.btn{
+    background-image:url(../img/sliding-down@3x.png);
+    background-size:cover;
+    position:fixed;
+    width:.96rem;
+    height:.96rem;
+    bottom:.4rem;
+    left:50%;
+    margin-left:-.48rem;
+}
+.bg .pagination {
+    position:absolute;
+    right:.56rem;
+    top:50%;
+    margin-top:-.48rem;
+}
+.swiper-pagination-switch {
+    display: block;
+    width: .2rem;
+    height: .2rem;
+    margin:0 auto .12rem;
+    border-radius: 50%;
+    border: 1px solid #fff;
+}
+.swiper-active-switch {
+    background: #fff;
+    border:2px solid #fff;
+}
+/*背景图 轮播样式*/
+a{
+    color:#272636;
+}
+.content{
+    margin-top:.88rem;
+    position:relative;
+}
+/*登录注册弹出框*/
+.loginPop,.menuPop{
+    width:72%;
+    background-color:#fff;
+    position:fixed;
+    top:.88rem;
+    bottom:0;
+    z-index:1000;
+}
+.loginPop{
+    left:-100%;
+}
+.loginPop ul,.menuPop ul{
+    padding:.4rem 0 0 .4rem;
+}
+.loginPop>ul>li,.menuPop>ul>li{
+    margin-bottom:.6rem;
+    font-size:.28rem;
+    color:#272636;
+}
+.loginPop>ul>li>a,.menuPop>ul>li>a,.menuPop i{
+    display:inline-block;
+    padding-left:.84rem;
+    height:.44rem;
+    line-height:.44rem;
+    background-repeat:no-repeat;
+    background-position:0 0;
+    background-size:contain;
+}
+.menuPop i{
+    width:.44rem;
+    height:.44rem;
+    margin-right:.4rem;
+    vertical-align:-.08rem;
+    padding-left:0;
+}
+.login-icon{
+    background-image:url(../img/login@3x.png);
+}
+.login-icon:hover,.login-icon:active{
+    background-image:url(../img/login_1@3x.png);
+}
+.register-icon{
+    background-image:url(../img/registered@3x.png);
+}
+.register-icon:hover,.register-icon:active{
+    background-image:url(../img/registered_1@3x.png);
+}
+.home-icon{
+    background-image:url(../img/home@3x.png);
+}
+.home-icon:hover,.home-icon:active{
+    background-image:url(../img/home_1@3x.png);
+}
+.forum-icon{
+    background-image:url(../img/forum@3x.png);
+}
+.forum-icon:hover,.forum-icon:active{
+    background-image:url(../img/forum_1@3x.png);
+}
+.handtour-icon{
+    background-image:url(../img/hand-tour@3x.png);
+}
+.handtour-icon:hover,.handtour-icon:active{
+    background-image:url(../img/hand-tour_1@3x.png);
+}
+.loginPop a:hover,.loginPop a:active,.menuPop a:hover,.menuPop a:active{
+    color:#eb4f38;
+}
+/*注册登录弹出框结束*/
+/*menu弹出框*/
+.menuPop{
+    width:72%;
+    margin-left:28%;
+    background-color:#fff;
+    right:-100%;
+}
+p.title.commer i{
+    background-image:url(../img/e-commerc@3x.png);
+}
+p.title.commer.active i{
+    background-image:url(../img/e-commerc_1@3x.png);
+}
+p.title.aboutus i{
+    background-image:url(../img/about-us@3x.png);
+}
+p.title.aboutus.active i{
+    background-image:url(../img/about-us_1@3x.png);
+}
+p.title.active{
+    color:#eb4f38;
+}
+p.title .arrow{
+    float:right;
+    width:.2rem;
+    height:.2rem;
+    margin:.14rem .3rem 0 0;
+    background:url(../img/arrows@3x.png) no-repeat 0 0;
+    background-size:contain;
+}
+p.title.active .arrow{
+    background-image:url(../img/arrows_1@3x.png);
+}
+.menuPop li.line{
+    padding-bottom:.4rem;
+    margin-bottom:.4rem;
+    border-bottom:1px solid #ccc;
+}
+/*电子商务和关于我们的二级菜单*/
+ul.secondMenu{
+    padding:0;
+    margin:.4rem 0 0 .84rem;
+}
+ul.aboutus li{
+    margin-bottom:.3rem;
+}
+ul.secondMenu li a{
+    color:#59585f;
+    font-size:.22rem;
+}

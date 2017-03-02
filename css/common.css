@@ -1,0 +1,128 @@
+@charset "utf-8";
+/*样式重置*/
+body,div,header,section,footer,article,aside,figure,p,ul,li,ol,h1,h2,h3,h4,h5,h6,dl,dt,dd,button,input,textarea,th,td{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+html{
+    min-height:100%;
+}
+body{
+    width:100%;
+    min-height:100%;
+    max-width:640px;
+    min-width:320px;
+    font: "Microsoft Yahei",Helvetica,Arial,sans-serif;
+    position:relative;
+    margin:0 auto;
+    box-sizing:border-box;
+}
+a,b,s,i,u{
+    text-decoration:none;
+    font-style:normal;
+}
+input,button{
+    outline:medium;
+    border:none;
+    cursor: pointer;
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    opacity: 1;
+    -moz-opacity: 1;
+    -webkit-opacity: 1;
+}
+img{
+    border:0;
+    vertical-align:middle;
+}
+.lf{
+    float:left;
+}
+.rt{
+    float:right;
+}
+.clear:after{
+    content:'';
+    display:block;
+    clear:both;
+}
+.hide{
+    display:none;
+}
+.show{
+    display:block;
+}
+/*header样式*/
+header{
+    width:100%;
+    background-color:#fff;
+    position:fixed;
+    left:0;
+    top:0;
+    z-index:9999;
+    border-bottom:1px solid #ccc;
+    height:.88rem;
+    text-align:center;
+    box-sizing:border-box;
+}
+header a.lf{
+    width:.4rem;
+    height:.4rem;
+    margin-top:.24rem;
+    background:url(../img/pagesImg/back@3x.png) no-repeat right 0;
+    background-size:contain;
+}
+header p{
+    font-size:.32rem;
+    height:.88rem;
+    line-height:.88rem;
+}
+/*header样式结束*/
+/**设备适配 字体**/
+@media only screen and (min-width:641px) {
+    html {
+        font-size:100px;
+    }
+}
+@media only screen and (max-width:640px) {
+    html {
+        font-size:100px;
+    }
+}
+@media only screen and (max-width:540px) {
+    html {
+        font-size:84.375px;
+    }
+}
+@media only screen and (max-width:480px) {
+    html {
+        font-size:75px;
+    }
+}
+@media only screen and (max-width: 415px) {
+    html {
+        font-size:64.6875px;
+    }
+}
+@media only screen and (max-width: 400px) {
+    html {
+        font-size:62.5px;
+    }
+}
+@media only screen and (max-width: 375px) {
+    html {
+        font-size:58.5938px;
+    }
+}
+@media only screen and (max-width: 360px) {
+    html {
+        font-size:56.25px;
+    }
+}
+@media only screen and (max-width: 320px) {
+    html {
+        font-size:50px;
+    }
+}

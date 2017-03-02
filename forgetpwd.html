@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <title>忘记密码</title>
+    <link rel="stylesheet" href="css/common.css" type="text/css"/>
+    <link rel="stylesheet" href="css/pages.css" type="text/css"/>
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/autoFontSize.min.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+</head>
+<body>
+    <header>
+        <a href="javascript:history.go(-1);" class="lf"></a>
+        <p>忘记密码</p>
+    </header>
+    <div class="content">
+        <div class="forgetBox">
+            <form action="" method="post" id="forgetBox">
+                <div>
+                    <p class="reminder"><i></i>手机：</p>
+                    <p><input type="text" name="userTel" placeholder="请输入手机号"/></p>
+                    <p class="error"></p>
+                    <p class="ok"></p>
+                </div>
+                <div>
+                    <p class="reminder"><i></i>验证码：</p>
+                    <p><a href="#" class="yanzhengma">获取短信验证码</a><input name='yzmTxt' type="text" class="yzmTxt"/></p>
+                    <p class="error"></p>
+                    <p class="ok"></p>
+                </div>
+                <a href="#" class="next">下一步</a>
+            </form>
+        </div>
+    </div>
+    <script>
+        $(function(){
+            $('p.ok').hide();
+            /**用户名的验证**/
+            var yzm=false,userName=false;
+            $('[name=userTel]').blur(function(){
+                var val=$(this).val().trim();
+                var errorMsg=$(this).parent().siblings('.error');
+                errorMsg.siblings('p.ok').hide();
+                if(!val){
+                    errorMsg.show().html('手机号不能为空');
+                    userName=false;
+                }else{//验证用户名是否存在
+                    $.post('data/loginName.php',{userName:val},function(data){
+                        if(data==='noexists'){
+                            errorMsg.show().html('此会员不存在');
+                            userName=false;
+                        }else{
+                            errorMsg.hide().siblings('p.ok').show();
+                            userName=true;
+                        }
+                    })
+                }
+            });
+            /**验证码的验证**/
+            $('[name=yzmTxt]').blur(function(){
+                var str='123456';/*假设为短信验证码*/
+                var val=$(this).val().trim();
+                var errorMsg=$(this).parent().siblings('.error');
+                errorMsg.siblings('p.ok').hide();
+                if(!val){
+                    errorMsg.show().html('验证码不能为空');
+                    yzm=false;
+                }else{
+                    if(val!==str){
+                        errorMsg.show().html('验证码不正确');
+                        yzm=false;
+                    }else{
+                        errorMsg.hide().siblings('p.ok').show();
+                        yzm=true;
+                    }
+                }
+            });
+            /**点击按钮跳转到下一个页面**/
+            $('a.next').click(function(e){
+                e.preventDefault();
+                if(yzm&&userName){
+                    window.location.href='resetpwd.html';
+                }
+            });
+            /**获取短信验证码的倒计时功能**/
+            var isAlive=false;
+            $('.yanzhengma').click(function(e){
+                e.preventDefault();
+                var long=60;
+                var me=this;
+                if(!isAlive){
+                    var timer=setInterval(function(){
+                        if(long>0){
+                            long-=1;
+                            me.style.color='#666';
+                            isAlive=true;
+                            me.innerHTML=long+'秒后重新发送';
+                        }else{
+                            clearInterval(timer);
+                            timer=null;
+                            me.style.color='#000';
+                            isAlive=false;
+                            me.innerHTML='获取短信验证码';
+                        }
+                    },1000);
+                }
+            })
+        })
+    </script>
+</body>
+</html>

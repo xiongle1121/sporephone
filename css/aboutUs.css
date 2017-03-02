@@ -1,0 +1,299 @@
+@charset "utf-8";
+/*加入我们样式*/
+/*页脚通用样式*/
+footer{
+    box-sizing:border-box;
+    height:2.2rem;
+    text-align:center;
+    color:#333;
+    padding:1.2rem 0 .2rem;
+    background:url(../img/pagesImg/footerbg@3x.png) no-repeat 0 bottom;
+    background-size:cover;
+}
+footer div.line{
+    width:40%;
+    border:1px solid #fff;
+    margin:0 auto;
+    margin-bottom:.28rem;
+}
+footer p{
+    font-size:.18rem;
+    line-height:.28rem;
+    color:#fff;
+}
+.container{
+     margin-top:.88rem;
+     box-sizing:border-box;
+     width:100%;
+ }
+/*中间内容区域*/
+.container .sporeImg{
+    width:100%;
+    height:auto;
+}
+.poemTxt{
+    text-align:center;
+}
+.poemTxt h3{
+    font-size:.3rem;
+    color:#3e8683;
+    margin:.4rem 0 .16rem;
+}
+.poemTxt>p{
+    font-size:.24rem;
+    color:#888;
+    line-height:.48rem;
+}
+.weNeed{
+    padding:0 .5rem;
+}
+.weNeed ol li{
+    list-style-type:decimal;
+    list-style-position:outside;
+}
+.weNeed ol{
+    padding-left:2em;
+}
+.weNeed h3 i{
+    display:inline-block;
+    width:1.2rem;
+    height:1.2rem;
+    background:url(../img/pagesImg/joinUstriangle@3x.png) no-repeat 0 0;
+    background-size:contain;
+    margin-right:.5rem;
+    vertical-align:-.08rem;
+}
+.weNeed h3{
+    font-size:.3rem;
+    color:#666;
+    padding-bottom:.3rem;
+    border-bottom:1px solid #FEBB4D;
+}
+.tech h5{
+    margin-top:.3rem;
+    color:#3e8683;
+    font-size:.28rem;
+}
+.tech.web h5{
+    margin-top:.56rem;
+}
+.tech{
+    font-size:.22rem;
+    line-height:.44rem;
+    color:#888;
+}
+.tech h6{
+    font-size:.24rem;
+    font-weight:normal;
+    margin-top:.16rem;
+}
+.request{
+    margin-left:.32rem;
+}
+/**团队介绍**/
+img.teamTop{
+    width:100%;
+    height:auto;
+}
+.teamcenter{
+    margin:0 .2rem;
+}
+.teamcenter img{
+    width:100%;
+}
+.teamcenter img:first-child{
+    padding:.48rem 0;
+}
+.teamcenter p{
+    color:#888;
+    font-size:.24rem;
+    margin:.3rem auto .08rem;
+    line-height:.44rem;
+}
+.teamcenter p i{
+    color:#F00731;
+    font-size:.28rem;
+}
+.teamcenter div{
+    font-size:.24rem;
+    color:#3e8683;
+    text-align:right;
+}
+.teamcenter div i{
+    display:inline-block;
+    width:.8rem;
+    height:.072rem;
+    margin-right:.08rem;
+    border-top:1px solid #3e8683;
+}
+.teamboss{
+    margin:.6rem .8rem;
+    text-align:center;
+}
+.teamboss img{
+    width:100%;
+    height:auto;
+}
+.teamboss h2{
+    margin:.4rem auto .2rem;
+    font-size:.32rem;
+    color:#3e8683;
+    line-height:.48rem;
+}
+.teamboss p{
+    text-align:center;
+    color:#888;
+    font-size:.24rem;
+    line-height:.44rem;
+    padding-bottom:1rem;
+    border-bottom:1px solid #fff100;
+}
+.teamwork{
+    margin:0 .2rem 0;
+    text-align:center;
+}
+.teamwork>img{
+    width:100%;
+    height:auto;
+}
+.teamwork div{
+    background:url(../img/pagesImg/teambg5@3x.png) no-repeat 0 0;
+    background-size:100% 100%;
+    padding-bottom:.24rem;
+}
+.teamwork div img{
+    width:75%;
+    padding:.14rem 0;
+}
+.teamwork div p{
+    font-size:.2rem;
+    color:#084560;
+    line-height:.36rem;
+    white-space:nowrap;
+}
+/**联系我们样式**/
+.contact{
+    position:fixed;
+    top:.88rem;
+    left:0;
+    right:0;
+    bottom:0;
+    overflow-y:hidden;
+    background:url(../img/pagesImg/contactbg@3x.png) no-repeat 0 0;
+    background-size:100% auto;
+}
+.contacterwei{
+    position:fixed;
+    right:.4rem;
+    bottom:.4rem;
+    width:3.2rem;
+    height:2.24rem;
+}
+.contacterwei img{
+    width:100%;
+    height:auto;
+}
+/**袋里商产品介绍的详情页**/
+.proAppDownLoad{
+    text-align:center;
+    width:100%;
+    position:relative;
+}
+.proAppDownLoad .bg{
+    width:100%;
+    height:auto;
+}
+.proAppDownLoad>div{
+    position:absolute;
+    left:50%;
+    top:1.4rem;
+    transform:translate(-50%,0);
+    -webkit-transform:translate(-50%,0);
+    -moz-transform:translate(-50%,0);
+}
+.proAppDownLoad>div img{
+    width:1rem;
+    height:auto;
+}
+.proAppDownLoad>div p{
+    color:#fff;
+    font-size:.28rem;
+    line-height:.4rem;
+    margin:.16rem 0 .28rem;
+}
+.proAppDownLoad>div a,.proBottom a{
+    display:block;
+    width:2rem;
+    text-align:center;
+    height:.6rem;
+    line-height:.6rem;
+    font-size:.28rem;
+    color:#fff;
+    margin:0 auto;
+    background-color:#32a4ae;
+    border-radius:.2rem;
+}
+.proStorage img.title{
+    display:block;
+    width:20%;
+    margin:.2rem auto;
+}
+.proStorage p.title{
+    font-size:.28rem;
+    color:#444;
+    margin-bottom:.4rem;
+    text-align:center;
+}
+.proStorage img{
+    width:100%;
+    height:auto;
+}
+.proStorage>div{
+    position:relative;
+}
+.proStorage p.text{
+    position:absolute;
+    text-align:center;
+    line-height:.48rem;
+    left:50%;
+    top:50%;
+    font-size:.22rem;
+    color:#fff;
+    white-space:nowrap;
+    transform:translate(-50%,-38%);
+    -webkit-transform:translate(-50%,-38%);
+    -moz-transform:translate(-50%,-38%);
+}
+.proTransform img.title{
+    display:block;
+    width:55%;
+    margin:.2rem auto .12rem;
+}
+.proTransform p.title{
+    font-size:.24rem;
+    color:#444;
+    text-align:center;
+    line-height:.48rem;
+    margin-bottom:.24rem;
+}
+.proTransform img{
+    width:100%;
+    height:auto;
+}
+.proTransform img.proCenter{
+    display:block;
+    width:95%;
+    margin-left:5%;
+}
+.proBottom img.title{
+    display:block;
+    width:20%;
+    margin:.48rem auto .16rem;
+}
+.proBottom p{
+    font-size:.24rem;
+    color:#666;
+    line-height:.4rem;
+    margin-bottom:.2rem;
+    text-align:center;
+}

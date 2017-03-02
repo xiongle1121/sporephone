@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <title>首页</title>
+    <link rel="stylesheet" href="css/common.css" type="text/css"/>
+    <link rel="stylesheet" href="css/index.css" type="text/css"/>
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/idangerous.swiper-2.1.min.js"></script>
+    <script src="js/autoFontSize.min.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+</head>
+<body>
+    <header id="head-nav">
+        <!--个人中心-->
+        <p class="person lf" data-target="person"></p>
+        <!--logo-->
+        <div class="logo"><img src="img/logo@3x.png"/></div>
+        <!--右侧汉堡包列表-->
+        <p class="menu rt" data-target="menu"></p>
+    </header>
+    <div class="content">
+        <!--banner广告轮播背景-->
+        <div class="bg swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="img/background01@3x.png"/>
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/background02@3x.png"/>
+                </div>
+                <div class="swiper-slide">
+                    <img src="img/background03@3x.png"/>
+                </div>
+            </div>
+            <div class="pagination"></div>
+            <a href="#" class="btn" id="btn"></a>
+        </div>
+        <!--登录注册弹出框-->
+        <div class="loginPop" id="person">
+            <!--未登录时弹出框的内容-->
+            <ul>
+                <li>
+                    <a class="login-icon" href="login.html">登录</a>
+                </li>
+                <li>
+                    <a class="register-icon" href="register.html">注册</a>
+                </li>
+            </ul>
+            <!--登录成功之后弹出框的内容-->
+            <ul class="hide">
+                <li>
+                    <a class="login-icon" href="">18374123225</a>
+                </li>
+                <li>
+                    <a class="register-icon" href="register.html">注册</a>
+                </li>
+                <li>
+                    <a class="cancel-icon" href="">注销</a>
+                </li>
+            </ul>
+        </div>
+        <!--汉堡包列表弹出框-->
+        <div class="menuPop" id="menu">
+            <ul>
+                <li>
+                    <a class="home-icon" href="index.html">首页</a>
+                </li>
+                <li>
+                    <a class="line forum-icon" href="">论坛</a>
+                </li>
+                <li>
+                    <p class="title commer">
+                        <i></i>电子商务<span class="arrow"></span>
+                    </p>
+                    <ul class="secondMenu">
+                        <li><a href="dailishang.html">袋里商</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="handtour-icon" href="">手游</a>
+                </li>
+                <li>
+                    <p class="title aboutus">
+                        <i></i>关于我们<span class="arrow"></span>
+                    </p>
+                    <ul class="secondMenu aboutus">
+                        <li><a href="teamdesc.html">团队介绍</a></li>
+                        <li><a href="joinus.html">加入我们</a></li>
+                        <li><a href="contactus.html">联系我们</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+</html>

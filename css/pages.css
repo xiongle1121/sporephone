@@ -1,0 +1,224 @@
+@charset "utf-8";
+.content{
+    position:fixed;
+    top:.88rem;
+    left:0;
+    right:0;
+    bottom:0;
+    background:url(../img/pagesImg/background@3x.png) no-repeat 0 0;
+    background-size:100% auto;
+}
+/*设置placeholder的字体大小和颜色*/
+/*兼容谷歌*/
+input::-webkit-input-placeholder{
+    color:#bababa;
+    font-size:.24rem;
+}
+/*兼容火狐4-18*/
+input:-moz-placeholder{
+    color:#bababa;
+    font-size:.24rem;
+}
+/*兼容火狐19+*/
+input::-moz-placeholder{
+    color:#bababa;
+    font-size:.24rem;
+}
+/*兼容IE10+*/
+input:-ms-input-placeholder{
+    color:#bababa;
+    font-size:.24rem;
+}
+/*登录页面loginBox样式*/
+.loginBox{
+    box-sizing: border-box;
+    width:100%;
+    height:4.9rem;
+    padding:.35rem 1.4rem 0;
+    background-color:#fff;
+    position:absolute;
+    margin-top:2.7rem;
+}
+.loginBox input{
+    width:3.6rem;
+    height:.5rem;
+    line-height:.5rem;
+    box-sizing: border-box;
+    padding-left:.1rem;
+    border:1px solid #D2D2D2;
+    border-radius:4px;
+    font-size:.24rem;
+    color:#666;
+}
+.loginBox input[name='userName']{
+  /*  margin-bottom:.3rem;*/
+}
+.loginBox a.loginBtn{
+    display:block;
+    font-size:.28rem;
+    letter-spacing:2px;
+    width:3.6rem;
+    background-color:#ffa00a;
+    color:#fff;
+    height:.64rem;
+    line-height:.64rem;
+    margin-bottom:.08rem;
+    border-radius:4px;
+    text-align:center;
+}
+.loginBox p.errorMsg{
+    height:.6rem;
+    line-height:.6rem;
+    color:#ff3000;
+    text-align:center;
+    font-size:.24rem;
+}
+.loginBox p.otherMsg a{
+    font-size:.24rem;
+}
+.loginBox a.lf{
+    color:#ffa00a;
+}
+.loginBox a.rt{
+    color:#8c8b88;
+}
+/*注册register页面 忘记密码forgetpwd页面 重置密码resetpwd页面 样式*/
+.forgetBox,.resetBox,.registerBox{
+    box-sizing:border-box;
+    width:100%;
+    height:4.9rem;
+    background-color:#fff;
+    padding-top:1.04rem;
+    position:absolute;
+    margin-top:2.7rem;
+}
+.forgetBox div,.registerBox div,.resetBox div{
+    box-sizing:border-box;
+    width:100%;
+    height:.5rem;
+    line-height:.5rem;
+    margin-bottom:.3rem;
+}
+.forgetBox div>p,.registerBox div>p,.resetBox div>p{
+    float:left;
+    font-size:.24rem;
+    color:#0b0b0b;
+}
+.forgetBox p.reminder,.registerBox p.reminder,.resetBox p.reminder{
+    width:1.76rem;
+    text-align:right;
+}
+.forgetBox p.reminder{
+    width:1.6rem;
+}
+.forgetBox div input,.forgetBox a.yanzhengma,.registerBox div input,.registerBox a.yanzhengma,.resetBox div input{
+    height:.5rem;
+    line-height:.5rem;
+    box-sizing: border-box;
+    border:1px solid #D2D2D2;
+    border-radius:4px;
+    font-size:.24rem;
+    color:#000;
+}
+.forgetBox input,.registerBox div input,.resetBox div input{
+    width:3.6rem;
+    padding-left:.1rem;
+}
+.forgetBox a.yanzhengma,.registerBox a.yanzhengma{
+    float:left;
+    width:2.3rem;
+    text-align:center;
+    margin-right:.1rem;
+}
+.forgetBox input.yzmTxt,.registerBox input.yzmTxt{
+    width:1.2rem;
+    padding-left:.14rem;
+}
+.forgetBox p.error,.registerBox p.error,.resetBox p.error{
+    font-size:.18rem;
+    color:#ff3000;
+    margin-top:.03rem;
+    height:.22rem;
+    line-height:.22rem;
+    width:.96rem;
+    float:left;
+    padding-left:.04rem;
+}
+.forgetBox p.ok,.registerBox p.ok,.resetBox p.ok{
+    width:.4rem;
+    height:.4rem;
+    margin-left:.14rem;
+    margin-top:.06rem;
+    background:url(../img/pagesImg/select@3x.png) no-repeat 0 0;
+    background-size:contain;
+}
+.forgetBox a.next,.registerBox a.zhuce,.resetBox a.complete{
+    display:block;
+    font-size:.28rem;
+    letter-spacing:2px;
+    width:3.6rem;
+    background-color:#ffa00a;
+    color:#fff;
+    height:.64rem;
+    line-height:.64rem;
+    margin-top:.6rem;
+    margin-left:1.76rem;
+    border-radius:4px;
+    text-align:center;
+}
+.forgetBox a.next{
+    margin-left:1.6rem;
+}
+.registerBox{
+    padding-top:.52rem;
+}
+/*注册成功 registercomplete页面样式*/
+.completeBox{
+    box-sizing:border-box;
+    width:100%;
+    height:4.9rem;
+    background-color:#fff;
+    padding-top:.54rem;
+    position:absolute;
+    margin-top:2.7rem;
+}
+.completeBox .completeTitle{
+    padding-left:1.4rem;
+    margin-bottom:.9rem;
+}
+.completeBox .completeTitle img{
+    width:.8rem;
+}
+.completeBox .completeTitle span{
+    padding-left:.3rem;
+    font-size:.32rem;
+    color:#8c8b88;
+}
+.completeBox p{
+    font-size:.22rem;
+    color:#ffa00a;
+    text-align:center;
+    margin-bottom:1.32rem;
+}
+.completeBox a.backhome{
+    display:block;
+    margin:0 auto;
+    width:2.8rem;
+    text-align:center;
+    height:.58rem;
+    line-height:.58rem;
+    background-color:#ffa00a;
+    color:#fff;
+    font-size:.28rem;
+    letter-spacing:2px;
+    border-radius:4px;
+}
+/**提示必填的红色小星星**/
+p.reminder i{
+    display:inline-block;
+    width:.16rem;
+    height:.16rem;
+    margin-right:.04rem;
+    background:url(../img/pagesImg/star@3x.png) no-repeat 0 center;
+    background-size:contain;
+}

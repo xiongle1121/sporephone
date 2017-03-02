@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <title>重置密码</title>
+    <link rel="stylesheet" href="css/common.css" type="text/css"/>
+    <link rel="stylesheet" href="css/pages.css" type="text/css"/>
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/autoFontSize.min.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+</head>
+<body>
+    <header>
+        <a href="javascript:history.go(-1);" class="lf"></a>
+        <p>重置密码</p>
+    </header>
+    <div class="content">
+        <div class="resetBox">
+            <form action="" method="post" id="forgetBox">
+                <div>
+                    <p class="reminder"><i></i>重置密码：</p>
+                    <p><input type="password" name="resetpwd" placeholder="请输入6～16位字母或数字"/></p>
+                    <p class="error"></p>
+                    <p class="ok"></p>
+                </div>
+                <div>
+                    <p class="reminder"><i></i>确认密码：</p>
+                    <p><input type="password" name='surepwd' placeholder="请再次输入密码"/></p>
+                    <p class="error"></p>
+                    <p class="ok"></p>
+                </div>
+                <a href='#' class="complete">下一步</a>
+            </form>
+        </div>
+    </div>
+    <script>
+        $(function(){
+            $('p.ok').hide();
+            /**重置密码验证**/
+            var resetPwd=false,surePwd=false;
+            $('[name=resetpwd]').blur(function(){
+                var val=$(this).val().trim();
+                var errorMsg=$(this).parent().siblings('.error');
+                var pwdReg=/^[0-9a-zA-Z]{6,16}$/;
+                errorMsg.siblings('p.ok').hide();
+                if(!val){
+                    errorMsg.show().html('密码不能为空');
+                    resetPwd=false;
+                }else{
+                    if(!pwdReg.test(val)){
+                        errorMsg.show().html('6～16位字符');
+                        resetPwd=false;
+                    }else{
+                        errorMsg.hide().siblings('p.ok').show();
+                        resetPwd=true;
+                    }
+                }
+            });
+            /**再次输入密码的验证**/
+            $('[name=surepwd]').blur(function(){
+                var val=$(this).val().trim();
+                var errorMsg=$(this).parent().siblings('.error');
+                var pwd=$('[name=resetpwd]').val();
+                errorMsg.siblings('p.ok').hide();
+                if(!val){
+                    errorMsg.show().html('确认密码不能为空');
+                }else{
+                    if(val!==pwd){
+                        errorMsg.show().html('两次密码不一致');
+                    }else{
+                        errorMsg.hide().siblings('p.ok').show();
+                    }
+                }
+            });
+            /**超链接跳转至登录页面**/
+            $('a.complete').click(function(e){
+                e.preventDefault();
+                $(this).html('完成');
+                window.location.href='login.html';
+            });
+        })
+    </script>
+</body>
+</html>
